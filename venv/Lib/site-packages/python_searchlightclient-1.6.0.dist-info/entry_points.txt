@@ -1,0 +1,8 @@
+[openstack.cli.extension]
+search = searchlightclient.osc.plugin
+
+[openstack.search.v1]
+search_facet_list = searchlightclient.osc.v1.facet:ListFacet
+search_query = searchlightclient.osc.v1.search:SearchResource
+search_resource_type_list = searchlightclient.osc.v1.resource_type:ListResourceType
+

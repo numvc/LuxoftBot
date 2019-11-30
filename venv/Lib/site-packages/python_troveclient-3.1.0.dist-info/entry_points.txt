@@ -1,0 +1,74 @@
+[console_scripts]
+trove = troveclient.shell:main
+
+[openstack.cli.extension]
+database = troveclient.osc.plugin
+
+[openstack.database.v1]
+database_backup_create = troveclient.osc.v1.database_backups:CreateDatabaseBackup
+database_backup_delete = troveclient.osc.v1.database_backups:DeleteDatabaseBackup
+database_backup_execution_delete = troveclient.osc.v1.database_backups:DeleteDatabaseBackupExecution
+database_backup_list = troveclient.osc.v1.database_backups:ListDatabaseBackups
+database_backup_list_instance = troveclient.osc.v1.database_backups:ListDatabaseInstanceBackups
+database_backup_show = troveclient.osc.v1.database_backups:ShowDatabaseBackup
+database_cluster_create = troveclient.osc.v1.database_clusters:CreateDatabaseCluster
+database_cluster_delete = troveclient.osc.v1.database_clusters:DeleteDatabaseCluster
+database_cluster_force_delete = troveclient.osc.v1.database_clusters:ForceDeleteDatabaseCluster
+database_cluster_grow = troveclient.osc.v1.database_clusters:GrowDatabaseCluster
+database_cluster_list = troveclient.osc.v1.database_clusters:ListDatabaseClusters
+database_cluster_list_instances = troveclient.osc.v1.database_clusters:ListDatabaseClusterInstances
+database_cluster_modules = troveclient.osc.v1.database_clusters:ListDatabaseClusterModules
+database_cluster_reset_status = troveclient.osc.v1.database_clusters:ResetDatabaseClusterStatus
+database_cluster_show = troveclient.osc.v1.database_clusters:ShowDatabaseCluster
+database_cluster_shrink = troveclient.osc.v1.database_clusters:ShrinkDatabaseCluster
+database_cluster_upgrade = troveclient.osc.v1.database_clusters:UpgradeDatabaseCluster
+database_configuration_attach = troveclient.osc.v1.database_configurations:AttachDatabaseConfiguration
+database_configuration_create = troveclient.osc.v1.database_configurations:CreateDatabaseConfiguration
+database_configuration_default = troveclient.osc.v1.database_configurations:DefaultDatabaseConfiguration
+database_configuration_delete = troveclient.osc.v1.database_configurations:DeleteDatabaseConfiguration
+database_configuration_detach = troveclient.osc.v1.database_configurations:DetachDatabaseConfiguration
+database_configuration_instances = troveclient.osc.v1.database_configurations:ListDatabaseConfigurationInstances
+database_configuration_list = troveclient.osc.v1.database_configurations:ListDatabaseConfigurations
+database_configuration_parameter_list = troveclient.osc.v1.database_configurations:ListDatabaseConfigurationParameters
+database_configuration_parameter_show = troveclient.osc.v1.database_configurations:ShowDatabaseConfigurationParameter
+database_configuration_show = troveclient.osc.v1.database_configurations:ShowDatabaseConfiguration
+database_db_create = troveclient.osc.v1.databases:CreateDatabase
+database_db_delete = troveclient.osc.v1.databases:DeleteDatabase
+database_db_list = troveclient.osc.v1.databases:ListDatabases
+database_flavor_list = troveclient.osc.v1.database_flavors:ListDatabaseFlavors
+database_flavor_show = troveclient.osc.v1.database_flavors:ShowDatabaseFlavor
+database_instance_create = troveclient.osc.v1.database_instances:CreateDatabaseInstance
+database_instance_delete = troveclient.osc.v1.database_instances:DeleteDatabaseInstance
+database_instance_detach_replica = troveclient.osc.v1.database_instances:DetachDatabaseInstanceReplica
+database_instance_eject_replica_source = troveclient.osc.v1.database_instances:EjectDatabaseInstanceReplicaSource
+database_instance_force_delete = troveclient.osc.v1.database_instances:ForceDeleteDatabaseInstance
+database_instance_list = troveclient.osc.v1.database_instances:ListDatabaseInstances
+database_instance_promote_to_replica_source = troveclient.osc.v1.database_instances:PromoteDatabaseInstanceToReplicaSource
+database_instance_reset_status = troveclient.osc.v1.database_instances:ResetDatabaseInstanceStatus
+database_instance_resize_flavor = troveclient.osc.v1.database_instances:ResizeDatabaseInstanceFlavor
+database_instance_resize_volume = troveclient.osc.v1.database_instances:ResizeDatabaseInstanceVolume
+database_instance_restart = troveclient.osc.v1.database_instances:RestartDatabaseInstance
+database_instance_show = troveclient.osc.v1.database_instances:ShowDatabaseInstance
+database_instance_update = troveclient.osc.v1.database_instances:UpdateDatabaseInstance
+database_instance_upgrade = troveclient.osc.v1.database_instances:UpgradeDatabaseInstance
+database_limit_list = troveclient.osc.v1.database_limits:ListDatabaseLimits
+database_log_enable = troveclient.osc.v1.database_instances:EnableDatabaseInstanceLog
+database_log_list = troveclient.osc.v1.database_logs:ListDatabaseLogs
+database_quota_show = troveclient.osc.v1.database_quota:ShowDatabaseQuota
+database_quota_update = troveclient.osc.v1.database_quota:UpdateDatabaseQuota
+database_root_disable = troveclient.osc.v1.database_root:DisableDatabaseRoot
+database_root_enable = troveclient.osc.v1.database_root:EnableDatabaseRoot
+database_root_show = troveclient.osc.v1.database_root:ShowDatabaseRoot
+database_user_create = troveclient.osc.v1.database_users:CreateDatabaseUser
+database_user_delete = troveclient.osc.v1.database_users:DeleteDatabaseUser
+database_user_grant_access = troveclient.osc.v1.database_users:GrantDatabaseUserAccess
+database_user_list = troveclient.osc.v1.database_users:ListDatabaseUsers
+database_user_revoke_access = troveclient.osc.v1.database_users:RevokeDatabaseUserAccess
+database_user_show = troveclient.osc.v1.database_users:ShowDatabaseUser
+database_user_show_access = troveclient.osc.v1.database_users:ShowDatabaseUserAccess
+database_user_update_attributes = troveclient.osc.v1.database_users:UpdateDatabaseUserAttributes
+datastore_list = troveclient.osc.v1.datastores:ListDatastores
+datastore_show = troveclient.osc.v1.datastores:ShowDatastore
+datastore_version_list = troveclient.osc.v1.datastores:ListDatastoreVersions
+datastore_version_show = troveclient.osc.v1.datastores:ShowDatastoreVersion
+

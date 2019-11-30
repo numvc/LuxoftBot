@@ -1,0 +1,114 @@
+Metadata-Version: 2.1
+Name: python-muranoclient
+Version: 1.3.0
+Summary: python-muranoclient
+Home-page: https://docs.openstack.org/python-muranoclient/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pbr (!=2.1.0,>=2.0.0)
+Requires-Dist: PrettyTable (<0.8,>=0.7.2)
+Requires-Dist: python-glanceclient (>=2.8.0)
+Requires-Dist: python-keystoneclient (>=3.8.0)
+Requires-Dist: iso8601 (>=0.1.11)
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: Babel (!=2.4.0,>=2.3.4)
+Requires-Dist: pyOpenSSL (>=17.1.0)
+Requires-Dist: requests (>=2.14.2)
+Requires-Dist: PyYAML (>=3.12)
+Requires-Dist: yaql (>=1.1.3)
+Requires-Dist: osc-lib (>=1.8.0)
+Requires-Dist: murano-pkg-check (>=0.3.0)
+Requires-Dist: oslo.serialization (!=2.19.1,>=2.18.0)
+Requires-Dist: oslo.utils (>=3.33.0)
+Requires-Dist: oslo.log (>=3.36.0)
+Requires-Dist: oslo.i18n (>=3.15.3)
+
+========================
+Team and repository tags
+========================
+
+.. image:: https://governance.openstack.org/tc/badges/python-muranoclient.svg
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
+
+.. Change things from this point on
+
+Murano
+======
+
+.. image:: https://img.shields.io/pypi/v/python-muranoclient.svg
+    :target: https://pypi.org/project/python-muranoclient/
+    :alt: Latest Version
+
+Murano Project introduces an application catalog, which allows application
+developers and cloud administrators to publish various cloud-ready
+applications in a browsable categorised catalog, which may be used by the
+cloud users (including the inexperienced ones) to pick-up the needed
+applications and services and composes the reliable environments out of them
+in a "push-the-button" manner.
+
+* `PyPi`_ - package installation
+* `Launchpad project`_ - release management
+* `Blueprints`_ - feature specifications
+* `Bugs`_ - issue tracking
+* `Source`_
+* `Specs`_
+* `How to Contribute`_
+
+.. _PyPi: https://pypi.org/project/python-muranoclient
+.. _Launchpad project: https://launchpad.net/python-muranoclient
+.. _Blueprints: https://blueprints.launchpad.net/python-muranoclient
+.. _Bugs: https://bugs.launchpad.net/python-muranoclient
+.. _Source: https://opendev.org/openstack/python-muranoclient
+.. _How to Contribute: https://docs.openstack.org/infra/manual/developers.html
+.. _Specs: https://specs.openstack.org/openstack/murano-specs/
+.. _Release Notes: https://docs.openstack.org/releasenotes/python-muranoclient
+
+Python Muranoclient
+-------------------
+python-muranoclient is a client library for Murano built on the Murano API.
+It provides a Python API (the ``muranoclient`` module) and a command-line tool
+(``murano``).
+
+
+Project Resources
+-----------------
+
+Project status, bugs, and blueprints are tracked on Launchpad:
+
+* Client bug tracker
+    * https://launchpad.net/python-muranoclient
+
+* Murano bug tracker
+    * https://launchpad.net/murano
+
+Developer documentation can be found here:
+
+  https://docs.openstack.org/murano/latest/
+
+Additional resources are linked from the project wiki page:
+
+  https://wiki.openstack.org/wiki/Murano
+
+License
+-------
+
+Apache License Version 2.0 http://www.apache.org/licenses/LICENSE-2.0
+
+
+

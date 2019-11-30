@@ -1,0 +1,59 @@
+[console_scripts]
+zun = zunclient.shell:main
+
+[openstack.cli.extension]
+container = zunclient.osc.plugin
+
+[openstack.container.v1]
+appcontainer_action_list = zunclient.osc.v1.containers:ActionList
+appcontainer_action_show = zunclient.osc.v1.containers:ActionShow
+appcontainer_add_security_group = zunclient.osc.v1.containers:AddSecurityGroup
+appcontainer_attach = zunclient.osc.v1.containers:AttachContainer
+appcontainer_availability_zone_list = zunclient.osc.v1.availability_zones:ListAvailabilityZone
+appcontainer_commit = zunclient.osc.v1.containers:CommitContainer
+appcontainer_cp = zunclient.osc.v1.containers:CopyContainer
+appcontainer_create = zunclient.osc.v1.containers:CreateContainer
+appcontainer_delete = zunclient.osc.v1.containers:DeleteContainer
+appcontainer_exec = zunclient.osc.v1.containers:ExecContainer
+appcontainer_host_list = zunclient.osc.v1.hosts:ListHost
+appcontainer_host_show = zunclient.osc.v1.hosts:ShowHost
+appcontainer_image_delete = zunclient.osc.v1.images:DeleteImage
+appcontainer_image_list = zunclient.osc.v1.images:ListImage
+appcontainer_image_pull = zunclient.osc.v1.images:PullImage
+appcontainer_image_search = zunclient.osc.v1.images:SearchImage
+appcontainer_image_show = zunclient.osc.v1.images:ShowImage
+appcontainer_kill = zunclient.osc.v1.containers:KillContainer
+appcontainer_list = zunclient.osc.v1.containers:ListContainer
+appcontainer_logs = zunclient.osc.v1.containers:LogsContainer
+appcontainer_network_attach = zunclient.osc.v1.containers:NetworkAttach
+appcontainer_network_detach = zunclient.osc.v1.containers:NetworkDetach
+appcontainer_network_list = zunclient.osc.v1.containers:NetworkList
+appcontainer_pause = zunclient.osc.v1.containers:PauseContainer
+appcontainer_quota_class_get = zunclient.osc.v1.quota_classes:GetQuotaClass
+appcontainer_quota_class_update = zunclient.osc.v1.quota_classes:UpdateQuotaClass
+appcontainer_quota_default = zunclient.osc.v1.quotas:GetDefaultQuota
+appcontainer_quota_delete = zunclient.osc.v1.quotas:DeleteQuota
+appcontainer_quota_get = zunclient.osc.v1.quotas:GetQuota
+appcontainer_quota_update = zunclient.osc.v1.quotas:UpdateQuota
+appcontainer_rebuild = zunclient.osc.v1.containers:RebuildContainer
+appcontainer_registry_create = zunclient.osc.v1.registries:CreateRegistry
+appcontainer_registry_delete = zunclient.osc.v1.registries:DeleteRegistry
+appcontainer_registry_list = zunclient.osc.v1.registries:ListRegistry
+appcontainer_registry_show = zunclient.osc.v1.registries:ShowRegistry
+appcontainer_registry_update = zunclient.osc.v1.registries:UpdateRegistry
+appcontainer_remove_security_group = zunclient.osc.v1.containers:RemoveSecurityGroup
+appcontainer_restart = zunclient.osc.v1.containers:RestartContainer
+appcontainer_run = zunclient.osc.v1.containers:RunContainer
+appcontainer_service_delete = zunclient.osc.v1.services:DeleteService
+appcontainer_service_disable = zunclient.osc.v1.services:DisableService
+appcontainer_service_enable = zunclient.osc.v1.services:EnableService
+appcontainer_service_forcedown = zunclient.osc.v1.services:ForceDownService
+appcontainer_service_list = zunclient.osc.v1.services:ListService
+appcontainer_set = zunclient.osc.v1.containers:UpdateContainer
+appcontainer_show = zunclient.osc.v1.containers:ShowContainer
+appcontainer_start = zunclient.osc.v1.containers:StartContainer
+appcontainer_stats = zunclient.osc.v1.containers:StatsContainer
+appcontainer_stop = zunclient.osc.v1.containers:StopContainer
+appcontainer_top = zunclient.osc.v1.containers:TopContainer
+appcontainer_unpause = zunclient.osc.v1.containers:UnpauseContainer
+

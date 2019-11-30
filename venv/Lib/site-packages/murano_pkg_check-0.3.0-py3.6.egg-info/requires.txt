@@ -1,0 +1,7 @@
+pbr>=1.8
+PyYAML>=3.10.0
+yaql>=1.1.0
+six>=1.9.0
+stevedore>=1.17.1
+semantic-version>=2.3.1
+oslo.i18n>=2.1.0

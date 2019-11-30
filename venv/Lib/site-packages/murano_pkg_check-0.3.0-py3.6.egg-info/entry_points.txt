@@ -1,0 +1,3 @@
+[console_scripts]
+murano-pkg-check = muranopkgcheck.cmd.run:main
+

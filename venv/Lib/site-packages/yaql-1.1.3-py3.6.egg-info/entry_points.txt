@@ -1,0 +1,3 @@
+[console_scripts]
+yaql = yaql.cli.run:main
+

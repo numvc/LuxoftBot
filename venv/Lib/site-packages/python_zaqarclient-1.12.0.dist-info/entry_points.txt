@@ -1,0 +1,100 @@
+[openstack.cli.extension]
+messaging = zaqarclient.queues.cli
+
+[openstack.messaging.v1]
+claim_create = zaqarclient.queues.v1.cli:CreateClaim
+claim_query = zaqarclient.queues.v1.cli:QueryClaim
+claim_release = zaqarclient.queues.v1.cli:ReleaseClaim
+claim_renew = zaqarclient.queues.v1.cli:RenewClaim
+messaging_flavor_create = zaqarclient.queues.v1.cli:CreateFlavor
+messaging_flavor_delete = zaqarclient.queues.v1.cli:DeleteFlavor
+messaging_flavor_list = zaqarclient.queues.v1.cli:ListFlavors
+messaging_flavor_show = zaqarclient.queues.v1.cli:ShowFlavor
+messaging_flavor_update = zaqarclient.queues.v1.cli:UpdateFlavor
+pool_create = zaqarclient.queues.v1.cli:CreatePool
+pool_delete = zaqarclient.queues.v1.cli:DeletePool
+pool_list = zaqarclient.queues.v1.cli:ListPools
+pool_show = zaqarclient.queues.v1.cli:ShowPool
+pool_update = zaqarclient.queues.v1.cli:UpdatePool
+queue_create = zaqarclient.queues.v1.cli:CreateQueue
+queue_delete = zaqarclient.queues.v1.cli:DeleteQueue
+queue_exists = zaqarclient.queues.v1.cli:CheckQueueExistence
+queue_get_metadata = zaqarclient.queues.v1.cli:GetQueueMetadata
+queue_list = zaqarclient.queues.v1.cli:ListQueues
+queue_set_metadata = zaqarclient.queues.v1.cli:SetQueueMetadata
+queue_stats = zaqarclient.queues.v1.cli:GetQueueStats
+
+[openstack.messaging.v2]
+claim_create = zaqarclient.queues.v2.cli:OldCreateClaim
+claim_query = zaqarclient.queues.v2.cli:OldQueryClaim
+claim_release = zaqarclient.queues.v2.cli:OldReleaseClaim
+claim_renew = zaqarclient.queues.v2.cli:OldRenewClaim
+message_list = zaqarclient.queues.v2.cli:OldListMessages
+message_post = zaqarclient.queues.v2.cli:OldPostMessages
+messaging_claim_create = zaqarclient.queues.v2.cli:CreateClaim
+messaging_claim_query = zaqarclient.queues.v2.cli:QueryClaim
+messaging_claim_release = zaqarclient.queues.v2.cli:ReleaseClaim
+messaging_claim_renew = zaqarclient.queues.v2.cli:RenewClaim
+messaging_flavor_create = zaqarclient.queues.v2.cli:CreateFlavor
+messaging_flavor_delete = zaqarclient.queues.v2.cli:DeleteFlavor
+messaging_flavor_list = zaqarclient.queues.v2.cli:ListFlavors
+messaging_flavor_show = zaqarclient.queues.v2.cli:ShowFlavor
+messaging_flavor_update = zaqarclient.queues.v2.cli:UpdateFlavor
+messaging_health = zaqarclient.queues.v2.cli:Health
+messaging_homedoc = zaqarclient.queues.v2.cli:HomeDoc
+messaging_message_list = zaqarclient.queues.v2.cli:ListMessages
+messaging_message_post = zaqarclient.queues.v2.cli:PostMessages
+messaging_ping = zaqarclient.queues.v2.cli:Ping
+messaging_pool_create = zaqarclient.queues.v2.cli:CreatePool
+messaging_pool_delete = zaqarclient.queues.v2.cli:DeletePool
+messaging_pool_list = zaqarclient.queues.v2.cli:ListPools
+messaging_pool_show = zaqarclient.queues.v2.cli:ShowPool
+messaging_pool_update = zaqarclient.queues.v2.cli:UpdatePool
+messaging_queue_create = zaqarclient.queues.v2.cli:CreateQueue
+messaging_queue_delete = zaqarclient.queues.v2.cli:DeleteQueue
+messaging_queue_get_metadata = zaqarclient.queues.v2.cli:GetQueueMetadata
+messaging_queue_list = zaqarclient.queues.v2.cli:ListQueues
+messaging_queue_purge = zaqarclient.queues.v2.cli:PurgeQueue
+messaging_queue_set_metadata = zaqarclient.queues.v2.cli:SetQueueMetadata
+messaging_queue_signed_url = zaqarclient.queues.v2.cli:CreateSignedUrl
+messaging_queue_stats = zaqarclient.queues.v2.cli:GetQueueStats
+messaging_subscription_create = zaqarclient.queues.v2.cli:CreateSubscription
+messaging_subscription_delete = zaqarclient.queues.v2.cli:DeleteSubscription
+messaging_subscription_list = zaqarclient.queues.v2.cli:ListSubscriptions
+messaging_subscription_show = zaqarclient.queues.v2.cli:ShowSubscription
+messaging_subscription_update = zaqarclient.queues.v2.cli:UpdateSubscription
+pool_create = zaqarclient.queues.v2.cli:OldCreatePool
+pool_delete = zaqarclient.queues.v2.cli:OldDeletePool
+pool_list = zaqarclient.queues.v2.cli:OldListPools
+pool_show = zaqarclient.queues.v2.cli:OldShowPool
+pool_update = zaqarclient.queues.v2.cli:OldUpdatePool
+queue_create = zaqarclient.queues.v2.cli:OldCreateQueue
+queue_delete = zaqarclient.queues.v2.cli:OldDeleteQueue
+queue_get_metadata = zaqarclient.queues.v2.cli:OldGetQueueMetadata
+queue_list = zaqarclient.queues.v2.cli:OldListQueues
+queue_purge = zaqarclient.queues.v2.cli:OldPurgeQueue
+queue_set_metadata = zaqarclient.queues.v2.cli:OldSetQueueMetadata
+queue_signed_url = zaqarclient.queues.v2.cli:OldCreateSignedUrl
+queue_stats = zaqarclient.queues.v2.cli:OldGetQueueStats
+subscription_create = zaqarclient.queues.v2.cli:OldCreateSubscription
+subscription_delete = zaqarclient.queues.v2.cli:OldDeleteSubscription
+subscription_list = zaqarclient.queues.v2.cli:OldListSubscriptions
+subscription_show = zaqarclient.queues.v2.cli:OldShowSubscription
+subscription_update = zaqarclient.queues.v2.cli:OldUpdateSubscription
+
+[zaqarclient.api]
+queues.v1 = zaqarclient.queues.v1.api:V1
+queues.v1.1 = zaqarclient.queues.v1.api:V1_1
+queues.v2 = zaqarclient.queues.v2.api:V2
+
+[zaqarclient.transport]
+http.v1 = zaqarclient.transport.http:HttpTransport
+http.v1.1 = zaqarclient.transport.http:HttpTransport
+http.v2 = zaqarclient.transport.http:HttpTransport
+https.v1 = zaqarclient.transport.http:HttpTransport
+https.v1.1 = zaqarclient.transport.http:HttpTransport
+https.v2 = zaqarclient.transport.http:HttpTransport
+ws.v1 = zaqarclient.transport.ws:WebsocketTransport
+ws.v1.1 = zaqarclient.transport.ws:WebsocketTransport
+ws.v2 = zaqarclient.transport.ws:WebsocketTransport
+

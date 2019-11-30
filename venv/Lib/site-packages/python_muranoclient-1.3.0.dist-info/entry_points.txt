@@ -1,0 +1,33 @@
+[console_scripts]
+murano = muranoclient.shell:main
+
+[openstack.application_catalog.v1]
+bundle_import = muranoclient.osc.v1.package:ImportBundle
+category_create = muranoclient.osc.v1.category:CreateCategory
+category_delete = muranoclient.osc.v1.category:DeleteCategory
+category_list = muranoclient.osc.v1.category:ListCategories
+category_show = muranoclient.osc.v1.category:ShowCategory
+class-schema = muranoclient.osc.v1.schema:ShowSchema
+deployment_list = muranoclient.osc.v1.deployment:ListDeployment
+environment_apps_edit = muranoclient.osc.v1.environment:EnvironmentAppsEdit
+environment_create = muranoclient.osc.v1.environment:EnvironmentCreate
+environment_delete = muranoclient.osc.v1.environment:EnvironmentDelete
+environment_deploy = muranoclient.osc.v1.environment:EnvironmentDeploy
+environment_list = muranoclient.osc.v1.environment:ListEnvironments
+environment_model_edit = muranoclient.osc.v1.environment:EnvironmentModelEdit
+environment_model_show = muranoclient.osc.v1.environment:EnvironmentModelShow
+environment_rename = muranoclient.osc.v1.environment:RenameEnvironment
+environment_session_create = muranoclient.osc.v1.environment:EnvironmentSessionCreate
+environment_show = muranoclient.osc.v1.environment:ShowEnvironment
+package_create = muranoclient.osc.v1.package:CreatePackage
+package_delete = muranoclient.osc.v1.package:DeletePackage
+package_download = muranoclient.osc.v1.package:DownloadPackage
+package_import = muranoclient.osc.v1.package:ImportPackage
+package_list = muranoclient.osc.v1.package:ListPackages
+package_show = muranoclient.osc.v1.package:ShowPackage
+package_update = muranoclient.osc.v1.package:UpdatePackage
+static-action_call = muranoclient.osc.v1.action:StaticActionCall
+
+[openstack.cli.extension]
+application_catalog = muranoclient.osc.plugin
+

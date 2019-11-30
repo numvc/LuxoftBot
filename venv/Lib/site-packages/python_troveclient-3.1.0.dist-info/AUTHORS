@@ -1,0 +1,154 @@
+Aaron Crickenberger <aaron.crickenberger@hp.com>
+Adam Gandelman <adamg@ubuntu.com>
+Alex Gaynor <alex.gaynor@gmail.com>
+Alex Tomic <atomic@tesora.com>
+Alexander Ignatov <aignatov@mirantis.com>
+Ali Adil <aadil@tesora.com>
+Amrith Kumar <amrith@amrith.org>
+Amrith Kumar <amrith@tesora.com>
+Andreas Jaeger <aj@suse.com>
+Andreas Jaeger <aj@suse.de>
+Andrey Shestakov <ashestakov@mirantis.com>
+Anh Tran <anhtt@vn.fujitsu.com>
+Arata Notsu <notsu@virtualtech.jp>
+Ashleigh Farnham <ashleighfarnham@gmail.com>
+Bartosz Zurkowski <b.zurkowski@samsung.com>
+Bob Thyne <bob.thyne@hp.com>
+Cao Xuan Hoang <hoangcx@vn.fujitsu.com>
+Chandan Kumar <chkumar@redhat.com>
+Chaozhe.Chen <chaozhe.chen@easystack.cn>
+Chen <dstbtgagt@foxmail.com>
+Christian Berendt <berendt@b1-systems.de>
+Chuck Short <chucks@redhat.com>
+Clare Springer <yidclare@gmail.com>
+Corey Bryant <corey.bryant@canonical.com>
+Craig Vyvial <cp16net@gmail.com>
+Cyril Roelandt <cyril.roelandt@enovance.com>
+DJ Johnstone <dj.johnstone@rackspace.com>
+Daniel Salinas <imsplitbit@gmail.com>
+Davanum Srinivas <davanum@gmail.com>
+Debasish Chowdhury <debasish.chowdhury@globallogic.com>
+Denis M <dmakogon@mirantis.com>
+Denis Makogon <dmakogon@mirantis.com>
+Deniz Demir <deniz.demir@hp.com>
+Dirk Mueller <dirk@dmllr.de>
+Doug Hellmann <doug@doughellmann.com>
+Doug Shelley <doug@parelastic.com>
+Doug Shelley <doug@tesora.com>
+Dougal Matthews <dougal@redhat.com>
+Duk Loi <duk@tesora.com>
+Ed Cranford <ed.cranford@rackspace.com>
+Edmond Kotowski <ekotowski@gmail.com>
+Eric Fried <openstack@fried.cc>
+Flavio Percoco <flaper87@gmail.com>
+Ghanshyam Mann <gmann@ghanshyammann.com>
+Greg Lucas <glucas@tesora.com>
+Guoqiang Ding <dingguoqiang@cloudin.cn>
+Gábor Antal <antal@inf.u-szeged.hu>
+Haikel Guemar <hguemar@fedoraproject.org>
+He Yongli <yongli.he@intel.com>
+Ian Wienand <iwienand@redhat.com>
+Iccha Sethi <iccha.sethi@rackspace.com>
+Ishita Mandhan <imandha@us.ibm.com>
+James E. Blair <jeblair@openstack.org>
+James E. Blair <jeblair@redhat.com>
+Jamie Lennox <jamielennox@redhat.com>
+Janonymous <janonymous.codevulture@gmail.com>
+Jeremy Stanley <fungi@yuggoth.org>
+Joe Cruz <joe.cruz@rackspace.com>
+Josh Dorothy <josh.dorothy@hp.com>
+K Jonathan Harker <k.jonathan.harker@hp.com>
+Kui Shi <skuicloud@gmail.com>
+Lance Bragstad <lbragstad@gmail.com>
+Lingxian Kong <anlin.kong@gmail.com>
+LiuNanke <nanke.liu@easystack.cn>
+Marcin Piwowarczyk <m.piwowarczy@samsung.com>
+Masaki Matsushita <glass.saga@gmail.com>
+Matt Fischer <matt@mattfischer.com>
+Matt Riedemann <mriedem@us.ibm.com>
+Matt Van Dijk <mvandijk@tesora.com>
+Mayuri Ganguly <mayuri.ganguly@hp.com>
+Michael Basnight <mbasnight@gmail.com>
+Michael Yu <michayu@ebaysf.com>
+Monty Taylor <mordred@inaugust.com>
+Morgan Jones <morgan@parelastic.com>
+Nguyen Hai <nguyentrihai93@gmail.com>
+Nguyen Hung Phuong <phuongnh@vn.fujitsu.com>
+Nick Shobe <nickshobe@gmail.com>
+Nikhil Manchanda <SlickNik@gmail.com>
+Nilakhya <nilakhya.chatterjee@globallogic.com>
+Nirmal Ranganathan <rnirmal@gmail.com>
+OTSUKA, Yuanying <ootsuka@mxs.nes.nec.co.jp>
+OTSUKA, Yuanying <yuanying@fraction.jp>
+OpenStack Release Bot <infra-root@openstack.org>
+Paul Marshall <paul.marshall@colorado.edu>
+Paul Marshall <paul.marshall@rackspace.com>
+Pavlo Shchelokovskyy <pshchelokovskyy@mirantis.com>
+Peter Stachowski <peter@tesora.com>
+Petr Malik <pmalik@tesora.com>
+Riddhi Shah <ridhi.j.shah@gmail.com>
+Robert Myers <robert.myers@rackspace.com>
+Ronald Bradford <ronald.bradford@gmail.com>
+Samuel Matzek <smatzek@us.ibm.com>
+Saurabh Surana <saurabh.surana@hp.com>
+Shuquan Huang <huang.shuquan@99cloud.net>
+Simon Chang <schang@tesora.com>
+Steve Leon <steve.leon@hp.com>
+Steve Martinelli <s.martinelli@gmail.com>
+Steve Martinelli <stevemar@ca.ibm.com>
+Sudarshan Acharya <sudarshan.acharya@rackspace.com>
+Sushil Kumar <skm.net@gmail.com>
+Sushil Kumar <sushil.kumar2@globallogic.com>
+Sushil Kumar <sushil.kumar3@hp.com>
+SushilKM <skm.net@gmail.com>
+Swapnil Kulkarni (coolsvap) <me@coolsvap.net>
+Swapnil Kulkarni <swapnilkulkarni2608@gmail.com>
+Theron Voran <theron.voran@rackspace.com>
+Tim Simpson <tim.simpson@rackspace.com>
+Tin Lam <tl3438@att.com>
+Tony Xu <hhktony@gmail.com>
+Tovin Seven <vinhnt@vn.fujitsu.com>
+Trevor McCasland <TM2086@att.com>
+Valencia Serrao <vserrao@us.ibm.com>
+Vieri <15050873171@163.com>
+Vipul Sabhaya <vipuls@gmail.com>
+Vu Cong Tuan <tuanvc@vn.fujitsu.com>
+Yotaro Konishi <konishi.yotaro@jp.fujitsu.com>
+Zhao Chao <zhaochao1984@gmail.com>
+Zhi Yan Liu <zhiyanl@cn.ibm.com>
+ZhiQiang Fan <aji.zqfan@gmail.com>
+ZhijunWei <wzj334965317@outlook.com>
+Zhiqiang Fan <aji.zqfan@gmail.com>
+amcrn <amcreynolds@ebaysf.com>
+amitg.b14@gmail.com <amitg.b14@gmail.com>
+caishan <caishan1993@foxmail.com>
+daiki kato <d-kato@wr.jp.nec.com>
+daniel-a-nguyen <dan.nguyens.mail@gmail.com>
+daniel-a-nguyen <daniel.a.nguyen@hp.com>
+denizdemir <denizdemir@gmail.com>
+dineshbhor <dinesh.bhor@nttdata.com>
+ekudryashova <ekudryashova@mirantis.com>
+huang.zhiping <huang.zhiping@99cloud.net>
+int32bit <krystism@gmail.com>
+jiansong <jian.song@easystack.cn>
+justin-hopper <justin.hopper@hp.com>
+kavithahr <kavitha.r@nectechnologies.in>
+liuqing <jing.liuqing@99cloud.net>
+llg8212 <lilinguo@huawei.com>
+qingszhao <zhao.daqing@99cloud.net>
+renminmin <mm.ren@haihangyun.com>
+ricolin <rico.l@inwinstack.com>
+ricolin <rico.lin@easystack.cn>
+ridhi.j.shah@gmail.com <ridhi.j.shah@gmail.com>
+sharika <sharika.pongubala@hp.com>
+shu-mutou <shu-mutou@rf.jp.nec.com>
+song jian <jian.song@easystack.cn>
+sunjia <sunjia@inspur.com>
+ting.wang <ting.wang@easystack.cn>
+venkatamahesh <venkatamaheshkotha@gmail.com>
+wangyao <wangyao@cmss.chinamobile.com>
+wlhc <1216083447@qq.com>
+wu.chunyang <wu.chunyang@99cloud.net>
+yangyapeng <yang.yapeng@99cloud.net>
+yangyong <yangyonglc@inspur.com>
+zhanggang <zhanggang@cmss.chinamobile.com>

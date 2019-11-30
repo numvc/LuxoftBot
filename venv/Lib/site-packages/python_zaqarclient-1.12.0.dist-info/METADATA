@@ -1,0 +1,132 @@
+Metadata-Version: 2.1
+Name: python-zaqarclient
+Version: 1.12.0
+Summary: Client Library for OpenStack Zaqar Messaging API
+Home-page: https://docs.openstack.org/python-zaqarclient/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pbr (!=2.1.0,>=2.0.0)
+Requires-Dist: requests (>=2.14.2)
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: stevedore (>=1.20.0)
+Requires-Dist: jsonschema (>=2.6.0)
+Requires-Dist: oslo.i18n (>=3.15.3)
+Requires-Dist: oslo.log (>=3.36.0)
+Requires-Dist: oslo.utils (>=3.33.0)
+Requires-Dist: keystoneauth1 (>=3.4.0)
+Requires-Dist: osc-lib (>=1.8.0)
+
+========================
+Team and repository tags
+========================
+
+.. image:: http://governance.openstack.org/tc/badges/python-zaqarclient.svg
+    :target: http://governance.openstack.org/tc/reference/tags/index.html
+
+.. Change things from this point on
+
+Python Zaqar Client
+===================
+
+.. image:: https://img.shields.io/pypi/v/python-zaqarclient.svg
+    :target: https://pypi.org/project/python-zaqarclient/
+    :alt: Latest Version
+
+:Wiki: `Zaqar Wiki`_
+:Launchpad: `Zaqar Launchpad`_
+:Review: `Code Review`_
+:Design: `Client Wiki`_
+:IRC: #openstack-zaqar @ freenode
+
+Welcome to the `Zaqar`_ Python Client project!
+
+Installation
+------------
+
+The latest stable release can be installed from PyPI::
+
+    pip install --upgrade python-zaqarclient
+
+For the adventurous, you may also install the latest code directly from git
+.openstack.org::
+
+    pip install git+https://git.openstack.org/openstack/python-zaqarclient.git
+
+What's in the box
+-----------------
+
+By installing python-zaqarclient you get programmatic access to the Zaqar v1.0
+API library. Plus, it installs a plugin to python-openstackclient that allows
+you to perform simple queue operations.
+
+How to use
+==========
+
+Python client
+-------------
+
+Details about design, features, usage and workflow can be found in the
+`Python Client Wiki`_.
+
+.. _Python Client Wiki: https://wiki.openstack.org/wiki/Zaqar/PythonClient
+
+Command line interface
+----------------------
+
+Zaqar bases its client implementation in the `OpenStack Client`_. It can be
+installed and configured by following the instructions in *Getting Started*
+and *Configuration* in the `OpenStack Client Readme`_ respectively.
+
+The CLI currently allows creation, removal and listing of queues. Some examples
+are::
+
+    $  openstack queue list --limit 3
+    $  openstack queue create myqueue
+    $  openstack queue delete myqueue
+
+.. _`OpenStack Client`: https://git.openstack.org/cgit/openstack/python-openstackclient
+.. _`OpenStack Client Readme`: https://git.openstack.org/cgit/openstack/python-openstackclient/tree/README.rst
+
+Contributing
+============
+
+Be sure to reference the `HACKING`_ file for details on coding style. You may
+also wish to read through Zaqar's `Contributor Guide`_ before contributing your
+first patch.
+
+.. _Zaqar: https://git.openstack.org/cgit/openstack/zaqar
+.. _HACKING: https://git.openstack.org/cgit/openstack/python-zaqarclient/tree/HACKING.rst
+.. _Zaqar Wiki: https://wiki.openstack.org/wiki/Zaqar
+.. _Contributor Guide: https://wiki.openstack.org/wiki/Zaqar#Contributor_Guide
+.. _Zaqar Launchpad: https://launchpad.net/zaqar
+.. _Code Review: https://review.openstack.org/#/q/status:open+project:openstack/python-zaqarclient,n,z
+.. _Client Wiki: https://wiki.openstack.org/wiki/Python_Zaqar_Client
+
+
+* License: Apache License, Version 2.0
+* `PyPi`_ - package installation
+* `Bugs`_ - issue tracking
+* `Source`_
+
+.. _PyPi: https://pypi.org/project/python-zaqarclient
+.. _Bugs: https://bugs.launchpad.net/python-zaqarclient
+.. _Source: https://git.openstack.org/cgit/openstack/python-zaqarclient
+
+
+

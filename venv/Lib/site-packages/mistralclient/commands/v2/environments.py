@@ -1,0 +1,192 @@
+# Copyright 2015 - StackStorm, Inc.
+#
+#    Licensed under the Apache License, Version 2.0 (the "License");
+#    you may not use this file except in compliance with the License.
+#    You may obtain a copy of the License at
+#
+#        http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS,
+#    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#    See the License for the specific language governing permissions and
+#    limitations under the License.
+
+import argparse
+
+from oslo_serialization import jsonutils
+
+from osc_lib.command import command
+
+from mistralclient.commands.v2 import base
+from mistralclient import utils
+
+
+class EnvironmentFormatter(base.MistralFormatter):
+    COLUMNS = [
+        ('name', 'Name'),
+        ('description', 'Description'),
+        ('variables', 'Variables'),
+        ('scope', 'Scope'),
+        ('created_at', 'Created at'),
+        ('updated_at', 'Updated at'),
+    ]
+    LIST_COLUMN_FIELD_NAMES = [c[0] for c in COLUMNS if c[0] != 'variables']
+    LIST_COLUMN_HEADING_NAMES = [c[1] for c in COLUMNS if c[0] != 'variables']
+
+    @staticmethod
+    def format(environment=None, lister=False):
+        if lister:
+            columns = EnvironmentFormatter.LIST_COLUMN_HEADING_NAMES
+        else:
+            columns = EnvironmentFormatter.headings()
+
+        if environment:
+            data = (
+                environment.name,)
+            if hasattr(environment, 'description'):
+                data += (environment.description or '<none>',)
+            else:
+                data += (None,)
+            if not lister:
+                data += (jsonutils.dumps(environment.variables, indent=4),)
+            data += (
+                environment.scope,
+                environment.created_at,)
+            if hasattr(environment, 'updated_at'):
+                data += (environment.updated_at or '<none>',)
+            else:
+                data += (None,)
+        else:
+            data = (tuple('' for _ in range(len(columns))),)
+
+        return columns, data
+
+
+class List(base.MistralLister):
+    """List all environments."""
+
+    def _get_format_function(self):
+        return EnvironmentFormatter.format_list
+
+    def _get_resources(self, parsed_args):
+        mistral_client = self.app.client_manager.workflow_engine
+        return mistral_client.environments.list(
+            marker=parsed_args.marker,
+            limit=parsed_args.limit,
+            sort_keys=parsed_args.sort_keys,
+            sort_dirs=parsed_args.sort_dirs,
+            fields=EnvironmentFormatter.fields(),
+            **base.get_filters(parsed_args)
+        )
+
+
+class Get(command.ShowOne):
+    """Show specific environment."""
+
+    def get_parser(self, prog_name):
+        parser = super(Get, self).get_parser(prog_name)
+
+        parser.add_argument(
+            'environment',
+            help='Environment name'
+        )
+
+        parser.add_argument(
+            '--export',
+            default=False,
+            action='store_true',
+            help='Export the environment suitable for import'
+        )
+
+        return parser
+
+    def take_action(self, parsed_args):
+        mistral_client = self.app.client_manager.workflow_engine
+        environment = mistral_client.environments.get(parsed_args.environment)
+
+        if parsed_args.export:
+            columns = ('name',
+                       'description',
+                       'scope',
+                       'variables')
+
+            data = (environment.name,
+                    environment.description,
+                    environment.scope,
+                    jsonutils.dumps(environment.variables))
+
+            return columns, data
+
+        return EnvironmentFormatter.format(environment)
+
+
+class Create(command.ShowOne):
+    """Create new environment."""
+
+    def get_parser(self, prog_name):
+        parser = super(Create, self).get_parser(prog_name)
+
+        parser.add_argument(
+            'file',
+            type=argparse.FileType('r'),
+            help='Environment configuration file in JSON or YAML'
+        )
+
+        return parser
+
+    def take_action(self, parsed_args):
+        data = utils.load_content(parsed_args.file.read())
+
+        mistral_client = self.app.client_manager.workflow_engine
+        environment = mistral_client.environments.create(**data)
+
+        return EnvironmentFormatter.format(environment)
+
+
+class Delete(command.Command):
+    """Delete environment."""
+
+    def get_parser(self, prog_name):
+        parser = super(Delete, self).get_parser(prog_name)
+
+        parser.add_argument(
+            'environment',
+            nargs='+',
+            help='Name of environment(s).'
+        )
+
+        return parser
+
+    def take_action(self, parsed_args):
+        mistral_client = self.app.client_manager.workflow_engine
+
+        utils.do_action_on_many(
+            lambda s: mistral_client.environments.delete(s),
+            parsed_args.environment,
+            "Request to delete environment %s has been accepted.",
+            "Unable to delete the specified environment(s)."
+        )
+
+
+class Update(command.ShowOne):
+    """Update environment."""
+
+    def get_parser(self, prog_name):
+        parser = super(Update, self).get_parser(prog_name)
+
+        parser.add_argument(
+            'file',
+            type=argparse.FileType('r'),
+            help='Environment configuration file in JSON or YAML'
+        )
+
+        return parser
+
+    def take_action(self, parsed_args):
+        data = utils.load_content(parsed_args.file.read())
+
+        mistral_client = self.app.client_manager.workflow_engine
+        environment = mistral_client.environments.update(**data)
+
+        return EnvironmentFormatter.format(environment)

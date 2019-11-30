@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: python-ironic-inspector-client
+Version: 3.7.0
+Summary: Python client for Ironic Inspector
+Home-page: https://docs.openstack.org/python-ironic-inspector-client/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: Apache-2
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: keystoneauth1 (>=3.4.0)
+Requires-Dist: osc-lib (>=1.8.0)
+Requires-Dist: oslo.i18n (>=3.15.3)
+Requires-Dist: oslo.utils (>=3.33.0)
+Requires-Dist: pbr (!=2.1.0,>=2.0.0)
+Requires-Dist: PyYAML (>=3.12)
+Requires-Dist: requests (>=2.14.2)
+Requires-Dist: six (>=1.10.0)
+Provides-Extra: cli
+Requires-Dist: python-openstackclient (>=3.12.0) ; extra == 'cli'
+Provides-Extra: test
+Requires-Dist: coverage (!=4.4,>=4.0) ; extra == 'test'
+Requires-Dist: doc8 (>=0.6.0) ; extra == 'test'
+Requires-Dist: fixtures (>=3.0.0) ; extra == 'test'
+Requires-Dist: flake8-import-order (>=0.13) ; extra == 'test'
+Requires-Dist: hacking (<1.1.0,>=1.0.0) ; extra == 'test'
+Requires-Dist: mock (>=2.0.0) ; extra == 'test'
+Requires-Dist: requests-mock (>=1.2.0) ; extra == 'test'
+Requires-Dist: oslo.concurrency (>=3.25.0) ; extra == 'test'
+Requires-Dist: python-openstackclient (>=3.12.0) ; extra == 'test'
+
+Ironic Inspector Client
+=======================
+
+.. image:: https://governance.openstack.org/tc/badges/python-ironic-inspector-client.svg
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
+
+This is a client library and tool for `Ironic Inspector`_.
+
+* Free software: Apache license
+* Source: https://opendev.org/openstack/python-ironic-inspector-client/
+* Documentation: https://docs.openstack.org/python-ironic-inspector-client/latest/
+* Bugs: https://storyboard.openstack.org/#!/project/958
+* Downloads: https://pypi.org/project/python-ironic-inspector-client
+* Release Notes: https://docs.openstack.org/releasenotes/python-ironic-inspector-client/
+
+Please follow usual OpenStack `Gerrit Workflow`_ to submit a patch, see
+`Inspector contributing guide`_ for more detail.
+
+Refer to the `HTTP API reference`_ for information on the
+**Ironic Inspector** HTTP API.
+
+
+.. _Gerrit Workflow: https://docs.openstack.org/infra/manual/developers.html#development-workflow
+.. _Ironic Inspector: https://docs.openstack.org/ironic-inspector/latest/
+.. _Inspector contributing guide: https://docs.openstack.org/ironic-inspector/latest/contributor/index.html
+.. _HTTP API reference: https://docs.openstack.org/ironic-inspector/latest/user/http-api.html
+
+
+
