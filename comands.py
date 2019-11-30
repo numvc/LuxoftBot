@@ -9,6 +9,7 @@ ARCH_TYPES = {"zip", "binary"}
 slack_token = os.environ["SLACK_TOKEN"]
 TO_SAVE_ARCH = "C:/All/LuxoftBot/"
 
+#определяет тип команды
 def  parse_comand(text, data, bot_id, web_client, channel_id):
     message_handler = MessageHandler(data['channel'])
     user = data['user']
@@ -25,9 +26,6 @@ def  parse_comand(text, data, bot_id, web_client, channel_id):
 
     if ("help" not in text) and ("do" not in text) and ("hello" not in text): # изменить на свитч кейс
         web_client.chat_postMessage(**message_handler.get_no_such_command_message())
-
-
-
 
 def file_shared(data, web_client, message_handler, channel_id):
     file_data = data['files']
@@ -46,10 +44,10 @@ def file_shared(data, web_client, message_handler, channel_id):
                 web_client.chat_postMessage(**message_handler.get_updated_file_message())
         else:
             web_client.chat_postMessage(**message_handler.get_filetype_error_message())
-
     else:
         web_client.chat_postMessage(**message_handler.get_amount_files_error_message())
 
+# cкачивает архив
 def download_file(url, file_name):
     request = requests.get(url, headers={'Authorization': 'Bearer %s' % slack_token})
     with open(TO_SAVE_ARCH+file_name, 'wb') as f:
@@ -57,7 +55,7 @@ def download_file(url, file_name):
             f.write(chunk)
     print("downloaded")
 
-
+# извлекает картинку/и, изменяет(другими функциями), создает и заполняет новый архив
 def change_file(filename, web_client, message_handler):
     if zipfile.is_zipfile(filename):
         z = zipfile.ZipFile(filename, 'r')                          # для чтения
@@ -96,6 +94,7 @@ def resize_image(input_image_path,
     resized_image.show()
     resized_image.save(output_image_path)
 
+# отправляет измененный файл
 def send_file(web_client, channel_id):
     response = web_client.files_upload(
         channels=channel_id,
@@ -104,7 +103,7 @@ def send_file(web_client, channel_id):
         title="response.zip")
     assert response["ok"]
 
-
+# делает картинку черно-белой
 def white_black(source_name, result_name):
     mode = 5
     image = Image.open(source_name)  # Открываем изображение.
